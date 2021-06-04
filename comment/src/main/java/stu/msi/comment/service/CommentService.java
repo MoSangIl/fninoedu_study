@@ -13,4 +13,6 @@ public interface CommentService {
 
 	public List<CommentDTO> list(HttpSession session);
 	public String login(String id, String pass, HttpSession session);
+
+	public void delete(int commentNum);
 }

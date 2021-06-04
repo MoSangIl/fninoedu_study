@@ -19,7 +19,8 @@
 		<br>
 		<div>
 			<c:forEach items="${list}" var="comment">
-			${comment.commentnum}&nbsp&nbsp${comment.id}&nbsp&nbsp${comment.content}&nbsp&nbsp${comment.commentdate}<br>
+			${comment.commentnum}&nbsp&nbsp${comment.id}&nbsp&nbsp${comment.content}&nbsp&nbsp${comment.commentdate}
+			<a href="./delete.chain?commentNum=${comment.commentnum}">삭제</a><br>
 			</c:forEach>
 		</div>
 		<div>

@@ -12,4 +12,8 @@
 	<select id="login" parameterType="String" resultType="String">
 		SELECT PASS FROM LOGIN WHERE ID = #{id}
 	</select>
+	<delete id="delete" parameterType="Integer">
+		DELETE FROM COMM WHERE COMMENTNUM=#{commentNum}
+	</delete>
+	
 </mapper>

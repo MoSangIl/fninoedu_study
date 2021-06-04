@@ -39,4 +39,9 @@ public class CommentDAOImpl implements CommentDAO {
 		String pass = sqlSessionTemplate.selectOne(namespace + ".login", id);
 		return pass;
 	}
+	@Override
+	public void delete(int commentNum) {
+		// TODO Auto-generated method stub
+		sqlSessionTemplate.delete(namespace + ".delete", commentNum);
+	}
 }
