@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{../layout/layout::setContent(~{this::content})}">
+   <th:block th:fragment="content">
+   <div>
+   <div class="product-card">
+        <!-- 이미지나, 상태에 class를 쓰는 이유는 반복을 하지 않기 위해 --> 
+        <th:block th:each="product : ${products}">
+	        <img class="product-image" th:src="${product.imageUrl}" th:alt="${product.name}">/>
+	        </div>
+	        <div class="product-contents">
+	        <span class="product-name" th:text = "${product.name}"></span>
+	        <span class="product-price" th:text = "${product.price}">원</span> 
+	           </div> 
+	            <div class="product-seller" th:text = "${product.seller}">  
+	             <img 
+	                class="product-avatar"  
+	                src="images/icons/avatar.png"  
+	                alt="avatar"/> 
+	             <span th:text="${product.seller}"></span> 
+	           </div> 
+	         </div>
+       </th:block>
+   </th:block>
+   </th:block>
+   
+<head>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>   
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="setContent(content)">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grab Market</title>
+    <link rel="stylesheet" href="./css/index.css" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+      // var products = [
+      //   {
+      //     name: "농구공",
+      //     price: 10000,
+      //     seller: "Jordan",
+      //     imageUrl: "images/products/basketball1.jpeg",
+      //   },
+      //   {
+      //     name: "축구공",
+      //     price: 10000,
+      //     seller: "Messi",
+      //     imageUrl: "images/products/soccerball1.jpg",
+      //   },
+      //   {
+      //     name: "키보드",
+      //     price: 10000,
+      //     seller: "Jobs",
+      //     imageUrl: "images/products/keyboard1.jpg",
+      //   },
+      // ];
+
+    </script>
+  </head>
+
+
+<body>
+<header>
+      <h1 class="blind">그랩 마켓</h1>
+      <section>
+        <h1 class="blind">헤더</h1>
+        <div id="header">
+          <div id="header-area">
+            <img src="./images/icons/logo.png" alt="logo" />
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <h1 class="blind">메인</h1>
+      <div id="main">
+        <section>
+          <h1 class="blind">배너</h1>
+          <div id="banner">
+            <img src="./images/banners/banner1.png" alt="banner" />
+          </div>
+        </section>
+        <section>
+          <h1>판매되는 상품들</h1>
+          <div id="product-list">
+         		<div class="content">
+			   <h1>CONTENT</h1>
+			   <th:block th:replace="${content}"></th:block>
+		   </div>
+		</div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <h1 class="blind">풋터</h1>
+      <div id="footer"></div>
+    </footer>
+
+
+</body>
+</th:block>
+</html>

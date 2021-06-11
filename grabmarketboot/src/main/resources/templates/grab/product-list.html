@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <th:block th:replace="~{/layout/index-layout::setContent(~{this::content})}">
+    <th:block th:fragment="content">
+      <section>
+        <h1 class="blind">베너</h1>
+        <div id="banner">
+          <img src="/images/banners/banner1.png" alt="banner" />
+        </div>
+      </section>
+      <section>
+        <h1>판매되는 상품들</h1>
+        <div id="product-list"></div>
+      </section>
+    </th:block>
+  </th:block>
+</html>

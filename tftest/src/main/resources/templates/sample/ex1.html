@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ex1</title>
+</head>
+<body>
+	<h1 th:text="${'hello'}"></h1>
+	<h1> Hello World </h1>
+	<li th:each="dto, status : ${list}" >
+		<span th:if="${dto.sno % 5 == 0}" th:text="${'-----' + dto.sno}"></span>
+		<span th:unless="${dto.sno % 5 == 0}" th:text="${dto.sno}"></span>
+		[[${dto}]]
+	</li>
+</body>
+</html>

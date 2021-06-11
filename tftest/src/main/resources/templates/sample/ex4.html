@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ex4</title>
+</head>
+<body>
+	<th:block th:each="dto: ${list}">
+		<h1 th:text="${'Hello world'}"></h1>
+		<!-- Query String -->
+		<a th:href="@{/sample/ex1(sno=${dto.sno})}">[[${dto.sno}]]</a>
+		<!-- Path Variable -->
+		<a th:href="@{/sample/ex1/{sno}(sno=${dto.sno})}">[[${dto.sno}]]</a>
+	</th:block>
+</body>
+</html>
